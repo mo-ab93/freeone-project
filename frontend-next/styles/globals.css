@@ -3,9 +3,12 @@
 @tailwind components;
 
 
-.relative.bg-white{
-background: rgba(255, 255, 255, 0.68);
-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(9.6px);
--webkit-backdrop-filter: blur(9.6px);
-}
+.relative.sticky.top-0.z-50{
+  background: rgba(255, 255, 255, 0.86);
+  
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+
+
+} 

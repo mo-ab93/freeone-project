@@ -251,7 +251,7 @@ export default function Navbar() {
             </a> */}
             <a
               href="#"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-[#22A2A3]	 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-[#E60D51]"
+              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-[#E60D51]	px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-[#22A2A3]"
             >
               Get Price
             </a>

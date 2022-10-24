@@ -18,27 +18,33 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const solutions = [
   {
-    name: 'Analytics',
-    description: 'Get a better understanding of where your traffic is coming from.',
+    name: 'Web development',
     href: '#',
     icon: ChartBarIcon,
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
+    name: 'Mobile apps development',
     href: '#',
     icon: CursorArrowRaysIcon,
   },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
+  { name: 'Cyber security', href: '#', icon: ShieldCheckIcon },
   {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
+    name: 'IOT systems',
     href: '#',
     icon: Squares2X2Icon,
   },
   {
-    name: 'Automations',
-    description: 'Build strategic funnels that will drive your customers to convert',
+    name: 'Computer Hardware',
+    href: '#',
+    icon: ArrowPathIcon,
+  },
+  {
+    name: 'Software licencing',
+    href: '#',
+    icon: ArrowPathIcon,
+  },
+  {
+    name: 'CCTV',
     href: '#',
     icon: ArrowPathIcon,
   },
@@ -141,7 +147,6 @@ export default function Navbar() {
                               <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
                               <div className="ml-4">
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                               </div>
                             </a>
                           ))}

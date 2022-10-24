@@ -1,8 +1,8 @@
-import Featureslist from "../components/featureslist"
+import Featureslist from "../components/featureslist";
 import { useState } from "react";
 
-export default function Home({stuff}) {
-  const [photos, setPhotos] = useState(stuff);
+export default function Home({ stuff }) {
+  const [features, setfeatures] = useState(stuff);
   return (
     <div>
       <main>
@@ -21,12 +21,17 @@ export default function Home({stuff}) {
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">Take control of your</span>
-                    <span className="block text-[#22A2A3]">customer support</span>
+                    <span className="block text-white">
+                      Take control of your
+                    </span>
+                    <span className="block text-[#22A2A3]">
+                      customer support
+                    </span>
                   </h1>
                   <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                    amet fugiat veniam occaecat fugiat aliqua.
+                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+                    qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
+                    occaecat fugiat aliqua.
                   </p>
                   <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                     <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
@@ -48,71 +53,93 @@ export default function Home({stuff}) {
               </div>
             </div>
           </div>
-
-          
         </div>
 
         {/* More main page content here... */}
       </main>
+      <h1 className="text-xl font-semibold text-[#22A2A3] text-center py-14">Services & Solutions</h1>
+          <div className="bg-white">
+            <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-3">
+            <div className="space-y-12">
+            <ul
+            role="list"
+            className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"
+          >
+      {features &&
+        features.data.map((detail) => (
+              <Featureslist
+                key={detail.id}
+                imageUrl={
+                  detail.attributes.image.data.attributes.formats.medium.url
+                }
+                name={detail.attributes.name}
+                description={detail.attributes.description}
+              />
+              ))}
+              </ul>
+              </div>
+              </div>
+            </div>
 
-      {photos &&
-                      photos.data.map((detail) => (
-      <Featureslist
-      key={detail.id}
-      thumbnailUrl={detail.attributes.image.data.attributes.formats.thumbnail.url}
-      name={detail.attributes.name}
-      description={detail.attributes.description}
-      
-      />
-
-      ))}
-    
-    <div className="bg-white">
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <p className="text-center text-lg font-semibold text-gray-600">
-          Trusted by over 5 very average small businesses
-        </p>
-        <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
-          <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-            <img
-              className="max-h-12"
-              src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-              alt="Workcation"
-            />
-          </div>
-          <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-            <img className="max-h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
-          </div>
-          <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-            <img className="max-h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
-          </div>
-          <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-            <img className="max-h-12" src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg" alt="Laravel" />
-          </div>
-          <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-            <img
-              className="max-h-12"
-              src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-              alt="StaticKit"
-            />
-          </div>
-          <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-            <img
-              className="max-h-12"
-              src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg"
-              alt="Statamic"
-            />
+      <div className="bg-white">
+        <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+          <p className="text-center text-lg font-semibold text-gray-600">
+            Trusted by over 5 very average small businesses
+          </p>
+          <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+              <img
+                className="max-h-12"
+                src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
+                alt="Workcation"
+              />
+            </div>
+            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+              <img
+                className="max-h-12"
+                src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
+                alt="Mirage"
+              />
+            </div>
+            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+              <img
+                className="max-h-12"
+                src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
+                alt="Tuple"
+              />
+            </div>
+            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+              <img
+                className="max-h-12"
+                src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg"
+                alt="Laravel"
+              />
+            </div>
+            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+              <img
+                className="max-h-12"
+                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
+                alt="StaticKit"
+              />
+            </div>
+            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+              <img
+                className="max-h-12"
+                src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg"
+                alt="Statamic"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-  )
+  );
 }
 
-
 export async function getStaticProps() {
-  const results = await fetch("http://localhost:1337/api/featureslists?populate=*");
+  const results = await fetch(
+    "http://localhost:1337/api/featureslists?populate=*"
+  );
   const stuff = await results.json();
   return {
     props: { stuff },

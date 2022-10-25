@@ -1,11 +1,10 @@
-
 import { useState } from "react";
+
 export default function Contact() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-
 
   //   Form validation state
   const [errors, setErrors] = useState({});
@@ -81,102 +80,110 @@ export default function Contact() {
     console.log(fullname, email, subject, message);
   };
 
-    return (
-		<form
-          onSubmit={handleSubmit}
-          className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
+  return (
+
+    <div>
+      <div className="relative bg-indigo-800">
+      <div className="absolute inset-0">
+        <img
+          className="h-full w-full object-cover"
+          src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
+          alt=""
+        />
+        <div className="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true" />
+      </div>
+      <div className="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Get in touch</h1>
+        <p className="mt-6 max-w-3xl text-xl text-indigo-100">
+          Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis eu. Orci vel
+          lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit distinctio.
+        </p>
+      </div>
+    </div>
+
+
+    <form
+      onSubmit={handleSubmit}
+      className="form rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-white"
+    >
+      <h1 className="text-2xl font-bold dark:text-[#22A2A3]">Send a message</h1>
+
+      <input
+        type="text"
+        value={fullname}
+        onChange={(e) => {
+          setFullname(e.target.value);
+        }}
+        name="fullname"
+        placeholder="Full name"
+        className="form-input block w-full rounded-md border mt-5 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
+      />
+      {errors?.fullname && (
+        <p className="text-red-500">Full name cannot be empty.</p>
+      )}
+
+      <input
+        type="email"
+        name="email"
+        value={email}
+        onChange={(e) => {
+          setEmail(e.target.value);
+        }}
+        placeholder="E-mail"
+        className="form-input block w-full rounded-md border mt-5 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
+      />
+      {errors?.email && <p className="text-red-500">Email cannot be empty.</p>}
+
+      <input
+        type="text"
+        name="subject"
+        value={subject}
+        onChange={(e) => {
+          setSubject(e.target.value);
+        }}
+        placeholder="Subject"
+        className="form-input block w-full rounded-md border mt-5 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
+      />
+      {errors?.subject && (
+        <p className="text-red-500">Subject cannot be empty.</p>
+      )}
+
+      <textarea
+        name="message"
+        value={message}
+        onChange={(e) => {
+          setMessage(e.target.value);
+        }}
+        placeholder="Message"
+        className="form-input block w-full rounded-md border mt-5 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
+      ></textarea>
+      {errors?.message && (
+        <p className="text-red-500">Message body cannot be empty.</p>
+      )}
+      <div className="flex flex-row items-center justify-start">
+        <button
+          type="submit"
+          className="text-white bg-[#E60D51] hover:bg-[#22A2A3] focus:outline-none focus:ring-1 focus:ring-[#E60D51] font-medium rounded-md text-sm mt-5 px-5 py-2.5 text-center mb-2 dark:bg-[#E60D51] dark:hover:bg-[#22A2A3] dark:focus:ring-[#E60D51]"
         >
-          <h1 className="text-2xl font-bold dark:text-gray-50">
-            Send a message
-          </h1>
+          {buttonText}
+        </button>
+      </div>
+      <div className="text-left">
+        {showSuccessMessage && (
+          <p className="text-green-500 font-semibold text-sm my-2">
+            Thankyou! Your Message has been delivered.
+          </p>
+        )}
+        {showFailureMessage && (
+          <p className="text-red-500">
+            Oops! Something went wrong, please try again.
+          </p>
+        )}
+      </div>
+    </form>
 
-          <label
-            htmlFor="fullname"
-            className="text-gray-500 font-light mt-8 dark:text-gray-50"
-          >
-            Full name<span className="text-red-500 dark:text-gray-50">*</span>
-          </label>
-          <input
-            type="text"
-            value={fullname}
-            onChange={(e) => {
-              setFullname(e.target.value);
-            }}
-            name="fullname"
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-          />
-         
-
-          <label
-            htmlFor="email"
-            className="text-gray-500 font-light mt-4 dark:text-gray-50"
-          >
-            E-mail<span className="text-red-500">*</span>
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-          />
-          
-
-          <label
-            htmlFor="subject"
-            className="text-gray-500 font-light mt-4 dark:text-gray-50"
-          >
-            Subject<span className="text-red-500">*</span>
-          </label>
-          <input
-            type="text"
-            name="subject"
-            value={subject}
-            onChange={(e) => {
-              setSubject(e.target.value);
-            }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-          />
-         
-          <label
-            htmlFor="message"
-            className="text-gray-500 font-light mt-4 dark:text-gray-50"
-          >
-            Message<span className="text-red-500">*</span>
-          </label>
-          <textarea
-            name="message"
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-          ></textarea>
-          
-          <div className="flex flex-row items-center justify-start">
-            <button
-              type="submit"
-              className="px-10 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center"
-            >
-              Submit
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="text-cyan-500 ml-2"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.00967 5.12761H11.0097C12.1142 5.12761 13.468 5.89682 14.0335 6.8457L16.5089 11H21.0097C21.562 11 22.0097 11.4477 22.0097 12C22.0097 12.5523 21.562 13 21.0097 13H16.4138L13.9383 17.1543C13.3729 18.1032 12.0191 18.8724 10.9145 18.8724H8.91454L12.4138 13H5.42485L3.99036 15.4529H1.99036L4.00967 12L4.00967 11.967L2.00967 8.54712H4.00967L5.44417 11H12.5089L9.00967 5.12761Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
-          </div>
-        </form>
-	)
+    </div>
+    
+    
+  );
 }
-

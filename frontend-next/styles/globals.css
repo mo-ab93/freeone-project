@@ -13,4 +13,21 @@ backdrop-filter: blur(7.5px);
 
 } 
 
+.relative.bg-gray-800{
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 3%;
+}
 
+.background-card{
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

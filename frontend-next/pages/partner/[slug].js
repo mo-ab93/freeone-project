@@ -54,7 +54,7 @@ const Partner = ({ article }) => {
                   <div className="sm:col-span-2">
                     <div className="space-y-4">
                       <div className="space-y-1  leading-6 py-8 px-2">
-                        <h2>{product.attributes.name}</h2>
+                        <h2 className="text-xl">{product.attributes.name}</h2>
                         <p className="text-indigo-600">{product.attributes.description}</p>
                       </div>
                       

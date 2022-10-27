@@ -86,15 +86,15 @@ export default function Contact({stuff}) {
 
   return (
     <div>
-      <div className="relative bg-indigo-800">
+      <div className="relative bg-gray-500">
         <div className="absolute inset-0">
           <img
             className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
+            src={stuff.data.attributes.imghero.data.attributes.formats.medium.url}
             alt=""
           />
           <div
-            className="absolute inset-0 bg-indigo-800 mix-blend-multiply"
+            className="absolute inset-0 bg-gray-500 mix-blend-multiply"
             aria-hidden="true"
           />
         </div>

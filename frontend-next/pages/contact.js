@@ -90,7 +90,7 @@ export default function Contact({stuff}) {
         <div className="absolute inset-0">
           <img
             className="h-full w-full object-cover"
-            src={stuff.data.attributes.imghero.data.attributes.formats.medium.url}
+            src={stuff.data.attributes.imghero.data.attributes.formats.large.url}
             alt=""
           />
           <div

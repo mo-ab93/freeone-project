@@ -6,13 +6,13 @@ export default function Partnerlist({ title, slug, logo }) {
     <Link href={`partner/${slug}`} >
       <li>
         <div className="space-y-4 shadow rounded">
-          <div className="aspect-w-4 aspect-h-2">
+          <div className="aspect-w-9 aspect-h-5">
             <img className=" object-cover rounded-t	" src={logo} alt="" />
           </div>
 
           <div className="space-y-2 px-3 py-2">
             <div>
-              <h3 className="text-lg font-medium tracking-tight text-gray-900">
+              <h3 className="text-lg font-medium tracking-tight text-gray-900 text-center">
                 {title}
               </h3>
             </div>

@@ -39,7 +39,7 @@ const Partner = ({ article }) => {
         <div className="bg-white">
           <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
             <div className="space-y-12">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-3xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-3xl text-center text-[#22A2A3]">
                 {article.data[0].attributes.title}'s products
               </h2>
 
@@ -64,7 +64,7 @@ const Partner = ({ article }) => {
                               <h2 className="text-xl">
                                 {product.attributes.name}
                               </h2>
-                              <p className="text-indigo-600">
+                              <p className="text-gray-600">
                                 {product.attributes.description}
                               </p>
                             </div>

@@ -31,6 +31,13 @@ backdrop-filter: blur(7.5px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.space-y-4.shadow.rounded{
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  /* border: 1px solid rgba(255, 255, 255, 0.125); */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .space-y-4.shadow.rounded:hover{
   cursor: pointer;
 }

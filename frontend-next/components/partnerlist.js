@@ -6,8 +6,8 @@ export default function Partnerlist({ title, slug, logo }) {
     <Link href={`partner/${slug}`} >
       <li>
         <div className="space-y-4 shadow rounded">
-          <div className="aspect-w-9 aspect-h-5">
-            <img className=" object-cover rounded-t	" src={logo} alt="" />
+          <div className="aspect-square	py-2">
+            <img className=" object-cover rounded-t" src={logo} alt="" />
           </div>
 
           <div className="space-y-2 px-3 py-2">

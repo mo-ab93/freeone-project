@@ -1,0 +1,127 @@
+{
+  "kind": "singleType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "service1": {
+      "type": "string"
+    },
+    "description1": {
+      "type": "text"
+    },
+    "image1": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "service2": {
+      "type": "string"
+    },
+    "description2": {
+      "type": "text"
+    },
+    "image2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "service3": {
+      "type": "string"
+    },
+    "description3": {
+      "type": "text"
+    },
+    "image3": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "service4": {
+      "type": "string"
+    },
+    "description4": {
+      "type": "text"
+    },
+    "image4": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "service5": {
+      "type": "string"
+    },
+    "description5": {
+      "type": "text"
+    },
+    "image5": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "service6": {
+      "type": "string"
+    },
+    "description6": {
+      "type": "text"
+    },
+    "image6": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "service7": {
+      "type": "string"
+    },
+    "description7": {
+      "type": "text"
+    },
+    "image7": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

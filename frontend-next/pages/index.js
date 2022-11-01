@@ -133,8 +133,8 @@ export default function Home({ stuff }) {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
-      <div className="relative mx-auto max-w-xl">
+      <div className="overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-16">
+      <div className="relative mx-auto max-w-2xl">
         <svg
           className="absolute left-full translate-x-1/2 transform"
           width={404}
@@ -180,8 +180,10 @@ export default function Home({ stuff }) {
           <rect width={404} height={404} fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
         </svg>
         <div className="text-center">
+          <h2>Contact us</h2>
+          <p>Stay in Toch with us</p>
         </div>
-        <div className="mt-12">
+        <div className="mt-4">
         <Form/>
         </div>
       </div>

@@ -54,7 +54,7 @@ export default function Form() {
 
     if (isValidForm) {
       setButtonText("Sending");
-      const res = await fetch("../pages/api/sendgrid", {
+      const res = await fetch("/api/sendgrid", {
         body: JSON.stringify({
           email: email,
           fullname: fullname,
@@ -85,10 +85,10 @@ export default function Form() {
   return (
     <div>
       <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
-            <div className="mx-auto max-w-lg lg:max-w-none">
+            <div className="mx-auto max-w-2xl lg:max-w-2xl">
               <form
                 onSubmit={handleSubmit}
-                className="form rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-white"
+                className="form rounded-lg shadow border flex flex-col px-8 py-8 bg-white dark:bg-white"
               >
                 <h1 className="text-2xl font-bold dark:text-[#22A2A3]">
                   Send a message
@@ -102,7 +102,7 @@ export default function Form() {
                   }}
                   name="fullname"
                   placeholder="Full name"
-                  className="form-input block w-full rounded-md border mt-5 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
+                  className="form-input block w-full rounded-md border mt-8 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
                 />
                 {errors?.fullname && (
                   <p className="text-red-500">Full name cannot be empty.</p>
@@ -116,7 +116,7 @@ export default function Form() {
                     setEmail(e.target.value);
                   }}
                   placeholder="E-mail"
-                  className="form-input block w-full rounded-md border mt-5 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
+                  className="form-input block w-full rounded-md border mt-8 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
                 />
                 {errors?.email && (
                   <p className="text-red-500">Email cannot be empty.</p>
@@ -130,7 +130,7 @@ export default function Form() {
                     setSubject(e.target.value);
                   }}
                   placeholder="Subject"
-                  className="form-input block w-full rounded-md border mt-5 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
+                  className="form-input block w-full rounded-md border mt-8 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
                 />
                 {errors?.subject && (
                   <p className="text-red-500">Subject cannot be empty.</p>
@@ -143,7 +143,7 @@ export default function Form() {
                     setMessage(e.target.value);
                   }}
                   placeholder="Message"
-                  className="form-input block w-full rounded-md border mt-5 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
+                  className="form-input block w-full h-40 rounded-md border mt-8 py-2 px-3 placeholder-gray-400  focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
                 ></textarea>
                 {errors?.message && (
                   <p className="text-red-500">Message body cannot be empty.</p>

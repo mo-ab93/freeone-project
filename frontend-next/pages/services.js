@@ -2,7 +2,9 @@ import { fetchAPI } from "../lib/api";
 
 export default function Services({ services }) {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+    <div className="bg-slate-50">
+      
+      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
       <ul role="list" className="space-y-6">
         <li className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
           <div className="mx-auto max-w-[90%] py-8 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-12 lg:px-8">
@@ -138,7 +140,7 @@ export default function Services({ services }) {
         </li>
         <li className="overflow-hidden rounded-md bg-white px-6 py-4 shadow">
           <div className="mx-auto max-w-[90%] py-8 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-12 lg:px-8">
-            <div className="flex flex-col max-w-[50%]">
+            <div className="flex flex-col lg:max-w-[50%]">
               <h2 className="font-bold text-2xl pb-4">
                 {services.data.attributes.service7}
               </h2>
@@ -160,6 +162,9 @@ export default function Services({ services }) {
         </li>
       </ul>
     </div>
+
+    </div>
+    
   );
 }
 export async function getStaticProps() {

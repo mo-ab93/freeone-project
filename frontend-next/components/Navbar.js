@@ -107,7 +107,7 @@ export default function Navbar() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-            <Popover className="relative">
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -169,16 +169,19 @@ export default function Navbar() {
                   </Transition>
                 </>
               )}
-            </Popover>
+            </Popover> */}
 
+            <a href="/services" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            Services & Solutions
+            </a>
+            <a href="/partners" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Partners
+            </a>
             <a href="/about" className="text-base font-medium text-gray-500 hover:text-gray-900">
               About us
             </a>
             <a href="/contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Contact us
-            </a>
-            <a href="/partners" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Partners
             </a>
 
           </Popover.Group>

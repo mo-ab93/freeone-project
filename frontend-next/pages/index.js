@@ -84,7 +84,7 @@ export default function Home({ featureStuff, contectStuff }) {
       <div className="bg-white">
         <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
           <p className="text-center text-lg font-semibold text-gray-600">
-            Trusted by over 5 very average small businesses
+          {contectStuff.attributes.smallbusinesses}
           </p>
           <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
             <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
@@ -201,8 +201,12 @@ export default function Home({ featureStuff, contectStuff }) {
             />
           </svg>
           <div className="text-center">
-            <h2>Contact us</h2>
-            <p>Stay in Toch with us</p>
+            <h1 className="text-2xl font-semibold text-[#22A2A3] text-center py-2">
+            {contectStuff.attributes.h1contact}
+            </h1>
+            <p className="text-center text-lg font-semibold text-gray-600">
+            {contectStuff.attributes.descriptioncontact}
+            </p>
           </div>
           <div>
             <Form />

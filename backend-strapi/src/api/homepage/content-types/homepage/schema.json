@@ -4,7 +4,8 @@
   "info": {
     "singularName": "homepage",
     "pluralName": "homepages",
-    "displayName": "Homepage"
+    "displayName": "Homepage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,15 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "heroimg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "h1span1": {
       "type": "string"
@@ -45,6 +46,15 @@
     },
     "featuretitle": {
       "type": "string"
+    },
+    "smallbusinesses": {
+      "type": "string"
+    },
+    "h1contact": {
+      "type": "string"
+    },
+    "descriptioncontact": {
+      "type": "text"
     }
   }
 }

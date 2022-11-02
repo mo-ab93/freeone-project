@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { fetchAPI } from "../lib/api";
 
 export default function Contact({ stuff }) {
@@ -124,7 +124,14 @@ export default function Contact({ stuff }) {
               <dl className="mt-8 text-base text-gray-500">
                 <div>
                   <dt className="sr-only">Postal address</dt>
-                  <dd>{stuff.data.attributes.address}</dd>
+                  <dd className="flex">
+                    <MapPinIcon
+                      className="h-6 w-6 flex-shrink-0 text-gray-400"
+                      aria-hidden="true"
+                    />
+                    <span className="ml-3">{stuff.data.attributes.address}</span>
+                  </dd>
+                  
                 </div>
                 <div className="mt-6">
                   <dt className="sr-only">Phone number</dt>

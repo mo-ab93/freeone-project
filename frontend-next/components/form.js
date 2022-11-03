@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
 export default function Form() {
   const [fullname, setFullname] = useState("");

@@ -83,7 +83,7 @@ export default function Form() {
   return (
     <div>
       <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-16 lg:px-8 xl:pl-12">
-        <div className="mx-auto max-w-2xl lg:max-w-2xl">
+        <div className="mx-auto max-w-[100%] lg:max-w-2xl">
           <form
             onSubmit={handleSubmit}
             className="form rounded-lg shadow border flex flex-col px-8 py-8 bg-white dark:bg-white"

@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacy_policies",
+  "info": {
+    "singularName": "privacy-policy",
+    "pluralName": "privacy-policies",
+    "displayName": "Privacy policy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyname": {
+      "type": "string"
+    },
+    "pagetitle": {
+      "type": "string"
+    },
+    "paragraph1": {
+      "type": "text"
+    },
+    "paragraph2": {
+      "type": "text"
+    },
+    "paragraph3": {
+      "type": "text"
+    },
+    "heading1": {
+      "type": "string"
+    },
+    "paragraph4": {
+      "type": "text"
+    },
+    "paragraph5": {
+      "type": "text"
+    },
+    "heading2": {
+      "type": "string"
+    },
+    "paragraph6": {
+      "type": "text"
+    },
+    "paragraph7": {
+      "type": "text"
+    }
+  }
+}

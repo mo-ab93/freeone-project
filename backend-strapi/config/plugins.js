@@ -1,4 +1,8 @@
 module.exports = ({ env }) => ({
+  // ...
+  "vercel-deploy": {
+    enabled: true,
+  },
   upload: {
     config: {
       provider: 'cloudinary',
@@ -9,8 +13,10 @@ module.exports = ({ env }) => ({
       },
       actionOptions: {
         upload: {},
+        uploadStream: {},
         delete: {},
       },
     },
   },
+  // ...
 });

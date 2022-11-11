@@ -65,17 +65,9 @@ const resources = [
     icon: ShieldCheckIcon,
   },
 ];
-const recentPosts = [
-  { id: 1, name: "Boost your conversion rate", href: "#" },
-  {
-    id: 2,
-    name: "How to use search engine optimization to drive traffic to your site",
-    href: "#",
-  },
-  { id: 3, name: "Improve your customer experience", href: "#" },
-];
 
-export default function Navbar() {
+
+export default function Navbar({logo}) {
   return (
     <Popover className="relative sticky top-0 z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -85,8 +77,8 @@ export default function Navbar() {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto sm:h-10"
-                src="https://www.freeone.space/wp-content/uploads/2022/10/LogoSlogen700x400-removebg-preview.png"
-                alt=""
+                src="https://res.cloudinary.com/dzsgvetxq/image/upload/v1668127521/Logo_Slogen700x400_removebg_preview_363664ef09.png?updated_at=2022-11-11T00:45:22.219Z"
+                alt="Freeone space"
               />
             </a>
           </div>
@@ -152,8 +144,8 @@ export default function Navbar() {
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://www.freeone.space/wp-content/uploads/2022/10/LogoSlogen700x400-removebg-preview.png"
-                    alt="Your Company"
+                    src="https://res.cloudinary.com/dzsgvetxq/image/upload/v1668127521/Logo_Slogen700x400_removebg_preview_363664ef09.png?updated_at=2022-11-11T00:45:22.219Z"
+                    alt="Freeone space"
                   />
                 </div>
                 <div className="-mr-2">
@@ -222,4 +214,17 @@ export default function Navbar() {
       </Transition>
     </Popover>
   );
+}
+
+export async function getStaticProps() {
+  try {
+    const logo = await fetchAPI("/navbar?populate=*");
+    return {
+      props: {
+        logo,
+      },
+    };
+  } catch (error) {
+    return { error };
+  }
 }

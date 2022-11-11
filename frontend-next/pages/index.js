@@ -1,10 +1,16 @@
 import Featureslist from "../components/featureslist";
 import Form from "../components/form";
 import { fetchAPI } from "../lib/api";
+import Head from 'next/head'
+
 
 export default function Home({ featureStuff, contectStuff }) {
   return (
     <div>
+      <Head>
+        <title>Freeone Space</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <main>
         <div>
           {/* Hero card */}
